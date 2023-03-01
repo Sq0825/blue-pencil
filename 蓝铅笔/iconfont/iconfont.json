@@ -1,0 +1,23 @@
+{
+  "id": "3906445",
+  "name": "蓝铅笔",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6366907",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "7208327",
+      "name": "短信",
+      "font_class": "duanxin",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    }
+  ]
+}

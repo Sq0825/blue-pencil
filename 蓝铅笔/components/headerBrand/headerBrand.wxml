@@ -1,0 +1,34 @@
+<view class="box">
+  <view class="nav-title">
+    <view class="header">
+      <view class="item header-left">
+        <image class="logo" src="https://assets-cdn.lanqb.com/lanqb/logo05.png" mode=""/>
+      </view>
+      <view class="item nf-box">
+        <image class="nf" src="https://assets-cdn.lanqb.com/lanqb/2023/2023year.png" mode=""/>
+      </view>
+      <view class="item header-right">
+        <swiper style="height: 88rpx;" interval="{{2000}}" vertical="{{true}}" autoplay="{{true}}">
+          <swiper-item class="swiper-item">
+            <view>
+              <navigator url="">
+                <image class="reight-reward" src="../../images/regster-reward_3.png" mode=""/>
+              </navigator>
+            </view>
+          </swiper-item>
+          <swiper-item class="swiper-item">
+            <view class="login-box">
+              <navigator url="" class="regist">注册</navigator>
+              <navigator url="" class="login">登录</navigator>
+          </view>
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+    <view class="act">
+      <image class="kcImg" src="https://assets-cdn.lanqb.com/popupv3/221205/m-ht.png" mode=""/>
+      <image class="btn" src="https://assets-cdn.lanqb.com/popupv3/221205/m-tb.png" mode=""/>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,155 @@
+<!--index.wxml-->
+<view>
+    <!-- 头部组件 -->
+    <view>
+        <header-brand></header-brand>
+    </view>
+    <!-- 主体布局 -->
+    <view class="main-layout">
+        <!-- 轮播图 -->
+        <view class="rotation">
+            <swiper class="rotation-swiper" indicator-dots="{{true}}" indicator-active-color="#fff" autoplay="{{true}}" interval="5000">
+                <swiper-item wx:for="{{rotationList}}" wx:key="id">
+                    <image class="rotation-img" src="https://ss.lanqb.com/{{item.picture}}" mode="" />
+                </swiper-item>
+            </swiper>
+        </view>
+        <!-- 8个子菜单分类 -->
+        <submenus submenusData="{{submenus}}"></submenus>
+        <!-- 大触直播 -->
+        <view class="live box">
+            <view class="box-title">
+                <text class="title-left">大触直播</text>
+                <navigator class="title-right" url="">查看更多></navigator>
+            </view>
+            <view class="live-list">
+                <view class="live-list-item live">
+                    <view class="live-auther">
+                        <image class="avat" wx:if="{{livebroadcastList.live[0].profile.avatar}}" src="https://ss.lanqb.com/{{livebroadcastList.live[0].profile.avatar}}" mode="" />
+                        <text class="auther">{{livebroadcastList.live[0].profile.nickname}}</text>
+                    </view>
+                    <view class="live-title">
+                        <navigator url="" class="h4">{{livebroadcastList.live[0].title}}</navigator>
+                    </view>
+                    <view class="live-cover">
+                        <image class="img" src="../../images/oneBig.png" />
+                    </view>
+                    <view class="live-date">
+                        <text class="date span">时间：{{livebroadcastList.live[0].begin_at}}</text>
+                        <text class="num span">{{livebroadcastList.live[0].statistic.purchases}}人感兴趣</text>
+                    </view>
+                </view>
+                <view class="live-list-item n2" wx:for="{{livebroadcastList.course.data}}" wx:key="data" wx:if="{{index !== 2}}">
+                    <view class="live-auther">
+                        <image class="avat" src="https://ss.lanqb.com/{{item.user_profile.avatar}}" mode="" />
+                        <text class="auther">{{item.user_profile.nickname}}</text>
+                    </view>
+                    <view class="live-title">
+                        <navigator url="" class="h4">{{item.title}}</navigator>
+                    </view>
+                    <view class="live-cover">
+                        <image class="img" src="https://ss.lanqb.com/{{item.posters.app}}" mode="" />
+                    </view>
+                    <view class="n2-date">
+                        <text class="date span">时间：{{item.begin_at}}</text>
+                        <text class="num span"><text class="icon">♡</text> {{item.statistic.purchases}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 热门教程 -->
+        <view class="course box">
+            <view class="box-title">
+                <text class="title-left">热门教程</text>
+                <navigator class="title-right" url="">查看更多></navigator>
+            </view>
+            <view class="course-list clearfix">
+                <view class="course-item fl" wx:for="{{hotCourseList}}" wx:key="id">
+                    <view class="course-img-box">
+                        <image class="course-img" src="https://ss.lanqb.com/{{item.posters.mobile}}" />
+                    </view>
+                    <text class="ellipsis">{{item.title}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- 问答专区 -->
+        <view class="queans box">
+            <view class="box-title">
+                <text class="title-left">问答专区</text>
+                <navigator class="title-right" url="">查看更多></navigator>
+            </view>
+            <view class="queans-list">
+                <view class="queans-item" wx:if="{{index<3}}" wx:for="{{queanList}}" wx:key="index">
+                    <view class="user-info">
+                        <image src="{{item.user_avatar}}" mode="" />
+                        <text>{{item.user_nickname}}</text>
+                    </view>
+                    <view class="queans-content">
+                        <view class="qa-title">
+                            {{item.title}}
+                        </view>
+                        <view class="qa-detail">
+                            <text class="qa-content">{{item.content}}</text>
+                            <image class="qa-cover" src="{{item.works}}" mode="" />
+                        </view>
+                    </view>
+                    <view class="teacher-comment">
+                        <view class="teacher-info">
+                            <view class="left">
+                                <image class="t-avatar" src="{{item.answer_user_avatar}}" mode="" />
+                                <text class="t-nickname">{{item.answer_user_nickname}}</text>
+                                <text class="t-adopted_qa">已采纳</text>
+                            </view>
+                        </view>
+                        <view class="t-content">
+                            {{item.answer_content[0].value}}
+                            <text>APP内查看</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 素材下载 -->
+        <view class="material box">
+            <view class="box-title">
+                <text class="title-left">素材下载</text>
+                <navigator class="title-right" url="">查看更多></navigator>
+            </view>
+            <view class="material-list clearfix">
+                <view class="material-item" >
+                    <view class="list-item clearfix" wx:if="{{index<3}}" wx:for="{{materialList}}" wx:key="index">
+                        <view class="list-item-img fl">
+                            <image src="https://ss.lanqb.com/{{item.imgCover}}" mode=""/>
+                        </view>
+                        <view class="list-item-con fr">
+                            <text class="con">{{item.title}}</text>
+                            <text class="time">{{item.created_at}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 关于蓝铅笔 -->
+        <view class="about">
+            <view class="about-title">
+             <text>关于蓝铅笔</text>
+            </view>
+            <view class="credible">
+                <image src="https://assets-cdn.lanqb.com/image/footer/footer-icon1_124x47.png" mode=""/>
+                <image src="https://assets-cdn.lanqb.com/image/footer/footer-icon5@2x.png" mode=""/>
+                <image src="https://assets-cdn.lanqb.com/image/footer/footer-icon2@2x.png" mode=""/>
+                <image src="https://assets-cdn.lanqb.com/image/footer/footer-icon3@2x.png" mode=""/>
+                <image src="https://xyt.xcc.cn/img/icon/icon8.png" mode=""/>
+            </view>
+            <view class="about-text">
+                <text>Copyright © 2022杭州多技教育科技有限公司</text>
+                <text class="text1">浙ICP备11056181号</text>
+            </view>
+            <view class="about-text">
+                <image src="https://assets-cdn.lanqb.com/image/footer/footer-icon4@2x.png" mode=""/>
+                <text>浙公网安备33010602000717号</text>
+            </view>
+        </view>
+    </view>
+
+</view>

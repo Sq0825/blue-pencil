@@ -1,0 +1,77 @@
+.box {
+    width: 750rpx;
+    height: 168rpx;
+  }
+  .nav-title {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+  .nav-title .header{
+    width: 750rpx;
+    height: 88rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background-color: white;
+  }
+  .header > .item {
+    height: 100%;
+  }
+  .header-left {
+    width: 340rpx;
+    display: flex;
+    align-items: center;
+  }
+  .header-left .logo {
+    width: 100%;
+    height: 55rpx;
+  }
+  .nf-box {
+    display: flex;
+    align-items: center;
+  }
+  .nf {
+    width: 108rpx;
+    height: 40rpx;
+  }
+  
+  
+  .header-right {
+    width: 164rpx;
+    height: 88rpx;
+    text-align: center;
+    line-height: 88rpx;
+  }
+  .header-right .login-box {
+    display: flex;
+  }
+  .header-right .login-box .login {
+    margin-left: 20rpx;
+  }
+  .reight-reward {
+    width: 164rpx;
+    height: 54rpx;
+    position: relative;
+    top: 15rpx;
+  }
+  .swiper-item {
+    height: 88rpx !important;
+  }
+  .act {
+    position: relative;
+  }
+  .act .kcImg{
+    width: 750rpx;
+    height:80rpx;
+  }
+  .act .btn {
+    position: absolute;
+    top: 18rpx;
+    right: 20rpx;
+    z-index: 1;
+    width: 144rpx;
+    height: 44rpx;
+  }
+  

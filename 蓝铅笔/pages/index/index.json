@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "submenus":"../../components/submenus/submenus"
+  }
+}

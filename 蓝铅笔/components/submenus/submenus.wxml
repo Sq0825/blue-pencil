@@ -1,0 +1,10 @@
+<view class="submenus">
+    <view class="submenus-list">
+      <view class="submenus-item" wx:for="{{submenusData}}" wx:key="submenus">
+        <navigator url="{{item.page}}" class="submenus-navTo">
+          <image class="submenus-icon" src="{{item.pirUrl}}" mode=""/>
+          <view class="text">{{item.title}}</view>
+        </navigator>
+      </view>
+    </view>
+</view>

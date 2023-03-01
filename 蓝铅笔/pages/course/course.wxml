@@ -1,0 +1,59 @@
+<!--pages/course/course.wxml-->
+<view class="courseBox">
+    <!-- 头部组件 -->
+    <view>
+        <header-brand></header-brand>
+    </view>
+    <!-- 导航栏 -->
+    <scroll-view class="scroll-view" enable-flex="{{true}}" scroll-x="{{true}}" scroll-with-animation="{{true}}" scroll-into-view="nav{{navIndex}}">
+        <view wx:for="{{navList}}" wx:key="navList" id="nav{{index}}" data-index="{{index}}" bindtap="navClick" class="view {{navIndex==index?'active':''}}">{{item.value}}</view>
+    </scroll-view>
+    <!-- 搜素部分 -->
+  <view class="course-content">
+    <view class="filter-search">
+      <text class="search-icon iconfont icon-search"></text>
+      <input class="search-ipt" type="search" placeholder="绘画教程" />
+    </view>
+    <view class="filter-imgbox">
+      <image class="img" src="https://ss.lanqb.com/o_1f8mp9vnuchogchc1map1vgr7.png?imageView2/1/w/686/h/274" mode=""/>
+    </view>
+    <view class="filter-main">
+      <view class="filter-list {{isShowMore?'':'h'}}">
+        <text bindtap="filterClick" data-index="0" class="filter-item {{filterIndex==0?'active':''}}">全部</text>
+        <text bindtap="filterClick" id="{{item.id}}" data-index="{{index+1}}" wx:for="{{course}}" wx:key="course" class="filter-item {{filterIndex==(index+1)?'active':''}}">{{item.name}}</text>
+      </view>
+      <button class="filter-btn" bindtap="moreClick">
+        {{isShowMore?'收起':'更多筛选'}}<view class="arrow iconfont icon-arrow {{isShowMore?'rotate':''}}"></view>
+      </button>
+    </view>
+    <!-- 搜索列表 -->
+    <view>
+      <scroll-view>
+        <view class="result-list">
+          <view class="result-list-item" wx:for="{{results}}" wx:key="results">
+            <navigator url="" class="nav">
+              <image class="result-img" src="https://ss.lanqb.com/{{item.posters.app}}" mode=""/>
+              <view class="result-item-detail">
+                <view class="detail-title">{{item.title}}</view>
+                <view class="detail-info">
+                  <view class="user-info">
+                    <image class="avatar" src="https://ss.lanqb.com/{{item.profile.avatar}}" mode=""/>
+                    <text class="name">{{item.profile.nickname}}</text>
+                  </view>
+                  <text class="user-info-chapters">共{{item.preview_setting.lessons_count}}节</text>
+                </view>
+                <view class="detail-others">
+                  <text class="study-num">{{item.study_num}}人在学</text>
+                  <view class="free-nologin">
+                    <text class="price">￥{{item.production.sale_rmb_price}}</text>
+                    <text class="wd">{{item.is_free == 'Y' ? '登录0元学' : '分享半价学'}}</text>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

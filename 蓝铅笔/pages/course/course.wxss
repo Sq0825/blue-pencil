@@ -1,0 +1,228 @@
+/* pages/course/course.wxss */
+@import "../../iconfont/iconfont.wxss";
+.scroll-view {
+    width: 750rpx;
+    height: 120rpx;
+    padding: 24rpx 8rpx 20rpx 8rpx;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    top: 168rpx;
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+  }
+  .scroll-view .view{
+    display: inline-block;
+    width: auto !important;
+    padding: 0 24rpx;
+    font-size: 33rpx;
+    font-weight: 400;
+    line-height: 75rpx;
+    color: #8c8c8c;
+    flex-shrink: 0;
+  }
+  .scroll-view .view.active {
+    font-size: 40.5rpx;
+    font-weight: 600;
+    color: #1a1b1e;
+  }
+  
+  /* 搜索部分 */
+  .course-content {
+    width: 750rpx;
+    padding: 118rpx 31.5rpx 97.5rpx;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .filter-search {
+    width: 686rpx;
+    height: 80rpx;
+    margin-bottom: 20rpx;
+    background: #f8f8f8;
+    border-radius: 13.5rpx;
+    border: 2rpx solid #e6e6e6;
+    padding: 0 30rpx;
+    font-size: 27.75rpx;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .filter-search .search-icon {
+    color: #c5c5c5;
+    font-size: 22.5rpx;
+    line-height: 80rpx;
+    display: inline-block;
+    margin-right: 20rpx;
+    position: relative;
+    bottom: 27rpx;
+  }
+  .filter-search .search-ipt {
+    width: calc(100% - 75rpx);
+    height: 100%;
+    font-size: 27.75rpx;
+    line-height: 80rpx;
+    border: none;
+    background: none;
+    display: inline-block;
+  }
+  
+  .filter-imgbox {
+    width: 686rpx;
+    height: 274rpx;
+    overflow: hidden;
+    border-radius: 18rpx;
+  }
+  .filter-imgbox .img {
+    width: 100%;
+    height: 100%;
+  }
+  .filter-main {
+    padding-top: 22rpx;
+    padding-bottom: 40rpx;
+  }
+  .filter-list {
+    margin-right: -16rpx;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .filter-list.h {
+    height: 198rpx;
+    overflow: hidden;
+  }
+  
+  .filter-item {
+    width: auto;
+    padding: 8rpx 22rpx;
+    margin-top: 10rpx;
+    margin-right: 16rpx;
+    white-space: nowrap;
+    color: #5b6164;
+    font-size: 27.75rpx;
+    font-weight: 400;
+    line-height: 40rpx;
+    border-radius: 45rpx;
+  }
+  .filter-item.active {
+    color: #1c9fea;
+    font-weight: 500;
+    background-color: rgba(28,159,234,.1);
+  }
+  
+  .filter-btn {
+    width: 686rpx !important;
+    height: 80rpx;
+    margin-top: 24rpx;
+    color: #3f4345;
+    font-size: 28rpx;
+    font-weight: 400;
+    background-color: #f7f7f7;
+    border-radius: 60rpx;
+  }
+  .filter-btn .arrow {
+    margin-left: 14rpx;
+    font-size: 23rpx;
+    transform: rotate(0deg);
+    display: inline-block;
+    transition: all .2s ease-in-out;
+  }
+  .filter-btn .arrow.rotate {
+    transform: rotate(180deg);
+  }
+  /* 搜索结果列表 */
+  .result-list-item {
+    margin-top: 0;
+    margin-bottom: 32rpx;
+  }
+  .result-list-item .nav{
+    display: flex;
+    align-items: stretch;
+  }
+  .result-img {
+    width: 262rpx;
+    height: 200rpx;
+    border-radius: 7.5rpx;
+    background: #f3f3f3;
+  }
+  .result-item-detail {
+    width: calc(100% - 285rpx);
+    height:196rpx;
+    position: relative;
+    margin-left: 24rpx;
+  }
+  .result-item-detail .detail-title {
+    height: 80rpx;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .result-item-detail .detail-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:16rpx;
+    font-size: 25.5rpx;
+  }
+  .detail-info .user-info {
+    height: 36rpx;
+  }
+  .detail-info .user-info .avatar {
+    width: 36rpx;
+    height: 36rpx;
+    border-radius: 50%;
+  }
+  .detail-info .user-info .name {
+    display: inline-block;
+    font-size: 25.5rpx;
+    width: 156rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 36rpx;
+  }
+  
+  .detail-others {
+    font-size: 25.5rpx;
+    color: #8c8c8c;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .detail-others .free-nologin {
+    height: 44rpx;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+  .detail-others .free-nologin .price {
+    padding-right: 3rpx;
+    padding-left: 3rpx;
+    line-height: 36rpx;
+    display: flex;
+    align-items: center;
+    color: #ff5900;
+    font-size: 21.75rpx;
+    font-weight: 500;
+    border: 2rpx solid #ff5900;
+    border-radius: 7.5rpx 0 0 7.5rpx;
+  }
+  .detail-others .free-nologin .wd {
+    font-size: 19.5rpx;
+    color: #fff;
+    background-color: #ff5900;
+    border-radius: 0 7.5rpx 7.5rpx 0;
+    display: flex;
+    padding-right: 6rpx;
+    padding-left: 6rpx;
+    line-height: 36rpx;
+    align-items: center;
+  }
+  
