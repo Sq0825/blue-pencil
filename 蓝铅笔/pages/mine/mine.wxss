@@ -1,1 +1,26 @@
 /* pages/mine/mine.wxss */
+
+.btnBox{
+    width: 700rpx;
+    height: 200rpx;
+    background-color:red;
+    padding: 0 26rpx;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    background: url("https://assets-cdn.lanqb.com/imgv3_m/ucenter2212/ucenter-bg.png");
+}
+.loginBtn{
+    margin-top: 30rpx;
+    margin-bottom: 20rpx;
+    width: 400rpx !important;
+    height: 80rpx;
+    color: white;
+    font-weight: 100;
+    background-color: #457eec;
+    border-radius: 40rpx;
+}
+.login-text{
+    font-size: 27rpx;
+    color: #8c8c8c;
+}
